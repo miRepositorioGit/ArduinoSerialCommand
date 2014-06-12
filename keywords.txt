@@ -2,4 +2,5 @@ SerialCommand	KEYWORD1
 clearBuffer	KEYWORD2
 next	KEYWORD2
 readSerial	KEYWORD2
-addCommand	KEYWORd2
+addCommand	KEYWORD2
+setEOL	KEYWORD2

@@ -184,3 +184,9 @@ void SerialCommand::addDefaultHandler(void (*function)())
 {
 	defaultHandler = function;
 }
+
+// Sets the line ending character
+void SerialCommand::setEOL(char eol)
+{
+  term = eol;
+}
