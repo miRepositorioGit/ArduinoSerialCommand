@@ -80,6 +80,14 @@ char *SerialCommand::next()
 	return nextToken; 
 }
 
+// Retrieve the actual token ("word" or "argument") from the Command buffer.  
+char *SerialCommand::dies() 
+{
+	char *token;
+	token = strtok_r(buffer,delim,&last);   // Search for command at start of buffer
+	return token; 
+}
+
 // This checks the Serial stream for characters, and assembles them into a buffer.  
 // When the terminator character (default '\r') is seen, it starts parsing the 
 // buffer for a prefix command, and calls handlers setup by addCommand() member
